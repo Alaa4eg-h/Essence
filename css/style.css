@@ -3,19 +3,20 @@
 
 /* CSS VARIABLES */
 :root {
-    --PrimaryFontFamily: 'Montserrat', sans-serif;
-    --SecondaryFontFamily: 'Open Sans', sans-serif;
+    --PrimaryFontFamily: 'Open Sans', sans-serif;
+    --SecondaryFontFamily: 'Montserrat', sans-serif;
     --FontRegular: 400;
     --FontMedium: 500;
     --FontBold: 700;
     --PrimaryColor: #e74c3c;
     --HeadingColor: #263238;
-    --TextColor: ##546e7a;
+    --TextColor: #546e7a;
     --WhiteColor: #fff;
     --GrayColor: #f9f9f9;
     --MainTransition: all 0.3s ease;
     --MainShadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     --MianOverlay: rgba(0, 0, 0, 0.6);
+    --SecondaryOverlay: rgba(231, 77, 60, 0.4)
 }
 
 /* GENERAL RULES */
@@ -41,10 +42,33 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
     font-family: var(--SecondaryFontFamily);
     color: var(--HeadingColor);
-    line-height: 1.2;
+    line-height: 1.3;
+}
+
+
+h1 {
+    font-size: 4.8rem;
+    font-weight: var(--FontBold);
+}
+
+h2 {
+    font-size: 3.8rem;
+    font-weight: var(--FontMedium);
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: var(--FontRegular);
+}
+
+h4 {
+    font-size: 2.25rem;
+    font-weight: var(--FontRegular);
 }
 
 p {
@@ -63,6 +87,10 @@ ul {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+img {
+    width: 100%;
 }
 
 /* START HELPER CLASSES */
@@ -114,30 +142,127 @@ a {
     justify-content: space-between;
 }
 
-/* END HELPER CLASSES */
 
-
-
-/* START HEADER STYLES */
-
-/* 
-.header {
-    background: url(../img/hero-area-2.jpg) no-repeat top left;
-    background-size: cover;
-    height: 100vh;
+.btn {
+    font-size: 1.6rem;
+    font-family: var(--PrimaryFontFamily);
+    padding: 1.5rem 2.5rem;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 30px;
+    font-weight: var(--FontMedium);
+    color: var(--WhiteColor);
     position: relative;
-    z-index: 0;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: var(--MainTransition);
 }
 
-.header::before {
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: var(--MainTransition);
+}
+
+.btn-transparent {
+    border-color: var(--WhiteColor);
+}
+
+.btn-transparent:hover {
+    background-color: var(--PrimaryColor);
+}
+
+.btn-colored {
+    background: var(--PrimaryColor);
+    border-color: var(--PrimaryColor);
+}
+
+.btn-colored:hover::before {
+    width: 100%;
+}
+
+
+.overlay::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--MianOverlay);
     z-index: -1;
+}
+
+.section {
+    padding-top: 120px;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto 4rem auto;
+    position: relative;
+}
+
+.section-heading {
+    font-size: 4rem;
+    font-weight: var(--FontBold);
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    width: 80px;
+    height: 4px;
+    background-color: var(--PrimaryColor);
+}
+
+.title-mirror {
+    font-size: 6rem;
+    color: rgba(0, 0, 0, .07);
+    letter-spacing: .5rem;
+    font-weight: var(--FontBold);
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 12px;
+}
+
+.desc {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+}
+
+
+.gray-bg {
+    background-color: var(--GrayColor);
+}
+
+/* END HELPER CLASSES */
+
+
+
+/* START HEADER STYLES */
+
+
+.header {
+    background: url(../img/hero/hero-area.jpg) no-repeat top left;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.header.overlay::before {
+    background-color: var(--MianOverlay);
 }
 
 .header-nav {
@@ -164,7 +289,7 @@ a {
 
 .nav-link {
     font-size: 1.4rem;
-    font-family: var(--SecondaryFontFamily);
+    font-family: var(--PrimaryFontFamily);
     font-weight: var(--FontRegular);
     color: var(--WhiteColor);
     padding: 0.5rem 0;
@@ -185,6 +310,158 @@ a {
 
 .list-item .active::before {
     display: block;
-} */
+}
+
+.header-text {
+    width: 70%;
+    height: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-title {
+    margin-bottom: 4rem;
+    color: var(--WhiteColor);
+}
+
+.header-desc {
+    color: var(--WhiteColor);
+    margin-bottom: 4rem;
+}
+
+.header-btn .btn:first-child {
+    margin-right: 2rem;
+}
+
+.header-cta {
+    text-align: center;
+    color: var(--WhiteColor);
+}
+
+.header-cta a {
+    display: inline-block;
+    width: 45px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid var(--WhiteColor);
+    line-height: 60px;
+    font-size: 2rem;
+}
+
+.header-cta .h-cta {
+    animation: upDown 2s infinite ease-in-out;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+        opacity: 0.4
+    }
+
+    100% {
+        transform: translateY(0.4em);
+        opacity: 0.9
+    }
+}
 
 /* END HEADER STYLES */
+
+/* START SERVICES STYLES */
+.services-wrapper {
+    flex-wrap: wrap;
+}
+
+.service-item {
+    padding: 4rem 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    flex: 0 0 calc(100% / 3 - 2rem);
+    margin-bottom: 3rem;
+    transition: var(--MainTransition);
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+.service-item:hover {
+    box-shadow: var(--MainShadow);
+    transform: scale(1.01);
+}
+
+
+.service-item .icon {
+    color: var(--PrimaryColor);
+    margin-bottom: 2rem;
+
+}
+
+/* END SERVICES STYLES */
+
+/* START ABOUT STYLES */
+.about .about-items {
+    flex: 0 0 40%;
+    margin-right: 3rem;
+}
+
+.about .item {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    transition: var(--MainTransition);
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+.about .item .icon {
+    margin-right: 3rem;
+    color: var(--PrimaryColor);
+}
+
+.about .about-graph {
+    flex: 0 0 calc(60% - 3rem);
+}
+
+/* END ABOUT STYLES */
+
+/* START PROMO STYLES */
+.promo {
+    background: url(../img/vedio/video.jpg) no-repeat top left;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding: 120px 0;
+}
+
+.promo.section-header,
+.promo.section-heading {
+    color: var(--WhiteColor);
+}
+
+.promo .icon {
+    color: var(--WhiteColor);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.promo .icon .promo-vedio {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--WhiteColor);
+    display: inline-block;
+    line-height: 80px;
+    border-radius: 50px;
+}
+
+.promo .icon .promo-vedio i {
+    vertical-align: middle;
+}
+
+.promo .section-heading::before {
+    display: none;
+}
+
+.promo.overlay::before {
+    background-color: var(--SecondaryOverlay);
+}
+
+/* END PROMO STYLES */
