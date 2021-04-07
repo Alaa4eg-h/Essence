@@ -248,7 +248,7 @@
     <!-- END PROMO -->
 
     <!-- START OUR WORK -->
-    <section id="portfolio" class="portfolio section">
+    <section id="portfolio" class="portfolio section gray-bg">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-heading">Our services</h2>
@@ -342,7 +342,7 @@
             <div class="pricing-tables flex">
                 <div class="pricing-table">
                     <div class="table-head">
-                        <h4>Starter plane</h4>
+                        <h4>Starter plan</h4>
                         <P><strong>49$</strong><span>/m</span></P>
                     </div>
                     <div class="table-body">
@@ -354,10 +354,12 @@
                             <li class="list-item">Vestibul varius fermentum erat</li>
                             <li class="list-item">-</li>
                         </ul>
-                        <div class="btn">Get plan</div>
+                        <div class="plan-cta">
+                            <a href="#" class="btn btn-colored">Get plan</a>
+                        </div>
                     </div>
                 </div>
-                <div class="pricing-table">
+                <div class="pricing-table pricing-popular">
                     <div class="table-head">
                         <h4>Popular plane</h4>
                         <P><strong>99$</strong><span>/m</span></P>
@@ -371,7 +373,9 @@
                             <li class="list-item">Vestibul varius fermentum erat</li>
                             <li class="list-item">-</li>
                         </ul>
-                        <div class="btn">Get plan</div>
+                        <div class="plan-cta">
+                            <a href="#" class="btn btn-colored">Get plan</a>
+                        </div>
                     </div>
                 </div>
                 <div class="pricing-table">
@@ -388,7 +392,9 @@
                             <li class="list-item">Vestibul varius fermentum erat</li>
                             <li class="list-item">Suspendisse quis metus</li>
                         </ul>
-                        <div class="btn">Get plan</div>
+                        <div class="plan-cta">
+                            <a href="#" class="btn btn-colored">Get plan</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -397,9 +403,9 @@
     <!-- END PRICING -->
 
     <!-- START COUNTER -->
-    <section class="counter">
+    <section class="counter section">
         <div class="container">
-            <div class="counter-content">
+            <div class="counter-content flex">
                 <div class="counter-item">
                     <div class="icon">
                         <i class="lni lni-rocket lni-32"></i>
@@ -442,13 +448,35 @@
     <!-- END COUNTER -->
 
     <!-- START TESTI -->
-    <section class="testi">
+    <section class="testi section gray-bg">
         <div class="container">
-            <div class="testi-items">
+            <div class="testi-items flex">
                 <div class="testi-single">
-                    <div class="testi-info">
+                    <div class="testi-info flex">
                         <div class="testi-img">
                             <img src="./img/testi/img1.jpg" alt="Testimonials">
+                        </div>
+                        <div class="clinet-text">
+                            <h4 class="testi-name">Johnathan Doe</h4>
+                            <p class="position">Marketing Head Matrix media</p>
+                        </div>
+                    </div>
+                    <div class="testi-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem,
+                            excepturi facere magnam illum, at accusantium doloremque odio.</p>
+                        <div class="icon">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-half"></i>
+                            <i class="lni lni-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testi-single">
+                    <div class="testi-info flex">
+                        <div class="testi-img">
+                            <img src="./img/testi/img2.jpg" alt="Testimonials">
                         </div>
                         <div class="clinet-text">
                             <h4 class="testi-name">Oidila Matik</h4>
@@ -468,29 +496,7 @@
                     </div>
                 </div>
                 <div class="testi-single">
-                    <div class="testi-info">
-                        <div class="testi-img">
-                            <img src="./img/testi/img2.jpg" alt="Testimonials">
-                        </div>
-                        <div class="clinet-text">
-                            <h4 class="testi-name">Alex Dattilo</h4>
-                            <p class="position">CEO Optima Inc</p>
-                        </div>
-                    </div>
-                    <div class="testi-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem,
-                            excepturi facere magnam illum, at accusantium doloremque odio.</p>
-                        <div class="icon">
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-filled"></i>
-                            <i class="lni lni-star-half"></i>
-                            <i class="lni lni-star-half"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-single">
-                    <div class="testi-info">
+                    <div class="testi-info flex">
                         <div class="testi-img">
                             <img src="./img/testi/img3.jpg" alt="Testimonials">
                         </div>
@@ -517,10 +523,10 @@
     <!-- END TESTI -->
 
     <!-- START CTA  -->
-    <section class="cta">
-        <div class="container">
+    <section class="cta section">
+        <div class="container flex">
             <div class="cta-info">
-                <h4>Stil confused? Download a free<br> lite version to get started!</h4>
+                <h4>Stil confused? <span>Download a free<br> lite version to get started!</span></h4>
             </div>
             <div class="cta-btn">
                 <a href="#" class="btn btn-transparent">Download</a>
@@ -530,14 +536,14 @@
     <!-- END CTA  -->
 
     <!-- START TEAM -->
-    <section id="team" class="team">
+    <section id="team" class="team section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-heading">Our team</h2>
                 <span class="title-mirror">Team</span>
                 <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iste.</p>
             </div>
-            <div class="team-cards">
+            <div class="team-cards flex">
                 <div class="card">
                     <div class="team-img">
                         <img src="./img/team/team1.png" alt="Awesome Team">
@@ -546,17 +552,17 @@
                         <h4 class="team-name">Johnathan Doe</h4>
                         <p class="position">Chief Technical Officer</p>
                         <div class="social-icons">
-                            <a class="icon">
-                                <i class="lni lni-facebook"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-facebook-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-twitter"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-twitter-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-instagram"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-instagram-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-linkedin"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-linkedin lni-16"></i>
                             </a>
                         </div>
                     </div>
@@ -569,17 +575,17 @@
                         <h4 class="team-name">Luke Chesser</h4>
                         <p class="position">Marketing Executive</p>
                         <div class="social-icons">
-                            <a class="icon">
-                                <i class="lni lni-facebook"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-facebook-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-twitter"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-twitter-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-instagram"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-instagram-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-linkedin"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-linkedin lni-16"></i>
                             </a>
                         </div>
                     </div>
@@ -592,17 +598,17 @@
                         <h4 class="team-name">David Givens</h4>
                         <p class="position">Business Manager</p>
                         <div class="social-icons">
-                            <a class="icon">
-                                <i class="lni lni-facebook"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-facebook-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-twitter"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-twitter-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-instagram"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-instagram-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-linkedin"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-linkedin lni-16"></i>
                             </a>
                         </div>
                     </div>
@@ -616,17 +622,17 @@
                         <p class="position">Graphic Designer
                         </p>
                         <div class="social-icons">
-                            <a class="icon">
-                                <i class="lni lni-facebook"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-facebook-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-twitter"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-twitter-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-instagram"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-instagram-filled lni-16"></i>
                             </a>
-                            <a class="icon">
-                                <i class="lni lni-linkedin"></i>
+                            <a href="#" class="icon">
+                                <i class="lni lni-linkedin lni-16"></i>
                             </a>
                         </div>
                     </div>
@@ -637,21 +643,21 @@
     <!-- END TEAM -->
 
     <!-- START SUBSCRIBE -->
-    <section class="subscribe" id="subscribe">
+    <section class="subscribe section" id="subscribe">
         <div class="container">
-            <div class="subscribe-content">
+            <div class="subscribe-content flex">
                 <form class="subscribe-form">
                     <h2 class="form-title">Subscribe to Newsletter</h2>
                     <p>Weekly Freebies and More!</p>
-                    <div class="input-group">
+                    <div class="input-group flex">
                         <input type="text" name="name" id="name" class="input" placeholder="Name">
                         <input type="tel" name="tel" id="phone" class="input" placeholder="Phone">
                         <input type="email" name="email" id="email" class="input" placeholder="E-mail">
-                        <button type="submit">Subscribe now</button>
+                        <input type="submit" value="Subscribe Now" class="btn btn-colored"></input>
                     </div>
                 </form>
-                <div class="subscribe-items">
-                    <div class="subscribe-single">
+                <div class="subscribe-items flex">
+                    <div class="subscribe-single flex">
                         <div class="icon">
                             <i class="lni lni-bullhorn lni-32"></i>
                         </div>
@@ -661,7 +667,7 @@
                                 nibheuismod tincidunt ut.</p>
                         </div>
                     </div>
-                    <div class="subscribe-single">
+                    <div class="subscribe-single flex">
                         <div class="icon">
                             <i class="lni lni-book lni-32"></i>
                         </div>
@@ -671,7 +677,7 @@
                                 nibheuismod tincidunt ut.</p>
                         </div>
                     </div>
-                    <div class="subscribe-single">
+                    <div class="subscribe-single flex">
                         <div class="icon">
                             <i class="lni lni-timer lni-32"></i>
                         </div>
@@ -689,14 +695,14 @@
     <!-- END SUBSCRIBE -->
 
     <!-- START BLOG -->
-    <section id="blog" class="blog">
+    <section id="blog" class="blog section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-heading">Blogs</h2>
                 <span class="title-mirror">Blogs</span>
                 <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, iste.</p>
             </div>
-            <div class="blog-content">
+            <div class="blog-content flex">
                 <div class="blog-item">
                     <img src="./img/blog/blog-1.jpg" alt="blog">
                     <div class="blog-body">
@@ -728,7 +734,7 @@
                     </div>
                 </div>
                 <div class="blog-item">
-                    <img src="./img/blog/blog-1.jpg" alt="blog">
+                    <img src="./img/blog/blog-2.jpg" alt="blog">
                     <div class="blog-body">
                         <p class="blog-date">
                             <i class="lni lni-calendar"></i>
@@ -758,7 +764,7 @@
                     </div>
                 </div>
                 <div class="blog-item">
-                    <img src="./img/blog/blog-1.jpg" alt="blog">
+                    <img src="./img/blog/blog-3.jpg" alt="blog">
                     <div class="blog-body">
                         <p class="blog-date">
                             <i class="lni lni-calendar"></i>
@@ -874,16 +880,16 @@
                     </div>
                     <div class="social-icons">
                         <a class="icon">
-                            <i class="lni lni-facebook"></i>
+                            <i class="lni lni-facebook-filled lni-16"></i>
                         </a>
                         <a class="icon">
-                            <i class="lni lni-twitter"></i>
+                            <i class="lni lni-twitter-filled lni-16"></i>
                         </a>
                         <a class="icon">
-                            <i class="lni lni-instagram"></i>
+                            <i class="lni lni-instagram-filled lni-16"></i>
                         </a>
                         <a class="icon">
-                            <i class="lni lni-linkedin"></i>
+                            <i class="lni lni-linkedin lni-16"></i>
                         </a>
                     </div>
                 </div>
@@ -903,16 +909,16 @@
                         the convers.</p>
                     <div class="social-icons">
                         <a class="icon">
-                            <i class="lni lni-facebook"></i>
+                            <i class="lni lni-facebook-filled lni-16"></i>
                         </a>
                         <a class="icon">
-                            <i class="lni lni-twitter"></i>
+                            <i class="lni lni-twitter-filled lni-16"></i>
                         </a>
                         <a class="icon">
-                            <i class="lni lni-instagram"></i>
+                            <i class="lni lni-instagram-filled lni-16"></i>
                         </a>
                         <a class="icon">
-                            <i class="lni lni-linkedin"></i>
+                            <i class="lni lni-linkedin lni-16"></i>
                         </a>
                     </div>
                 </div>
