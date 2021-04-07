@@ -8,7 +8,7 @@
     --FontRegular: 400;
     --FontMedium: 500;
     --FontBold: 700;
-    --PrimaryColor: #e74c3c;
+    --PrimaryColor: #f97794;
     --HeadingColor: #263238;
     --TextColor: #546e7a;
     --WhiteColor: #fff;
@@ -146,7 +146,7 @@ img {
 .btn {
     font-size: 1.6rem;
     font-family: var(--PrimaryFontFamily);
-    padding: 1.5rem 2.5rem;
+    padding: 1.2rem 3rem;
     text-transform: uppercase;
     outline: none;
     border-radius: 30px;
@@ -188,6 +188,11 @@ img {
     width: 100%;
 }
 
+.btn-white {
+    background-color: var(--WhiteColor);
+    color: var(--PrimaryColor);
+    border-color: var(--PrimaryColor);
+}
 
 .overlay::before {
     content: '';
@@ -336,14 +341,17 @@ img {
 .header-cta {
     text-align: center;
     color: var(--WhiteColor);
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
 }
 
 .header-cta a {
     display: inline-block;
     width: 45px;
     height: 60px;
-    border-radius: 30px;
-    border: 1px solid var(--WhiteColor);
+    border-radius: 10px;
+    border: 2px solid var(--WhiteColor);
     line-height: 60px;
     font-size: 2rem;
 }
@@ -358,9 +366,14 @@ img {
         opacity: 0.4
     }
 
+    50% {
+        transform: translateY(0.4em);
+        opacity: 0.5;
+    }
+
     100% {
         transform: translateY(0.4em);
-        opacity: 0.9
+        opacity: 0.1;
     }
 }
 
@@ -432,8 +445,8 @@ img {
     padding: 120px 0;
 }
 
-.promo.section-header,
-.promo.section-heading {
+.promo .section-heading,
+.promo .desc {
     color: var(--WhiteColor);
 }
 
@@ -465,3 +478,66 @@ img {
 }
 
 /* END PROMO STYLES */
+
+/* STRAT PORTFOLIO STYELS */
+
+.portfolio .portfolio-control {
+    margin-bottom: 3rem;
+}
+
+.portfolio .control-list.flex {
+    justify-content: center;
+}
+
+.portfolio .portfolio-content {
+    flex-wrap: wrap;
+}
+
+.portfolio .portfolio-item {
+    flex: 0 0 calc(100% / 3 - 2rem);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.portfolio .portfolio-item:hover .zooming {
+    transform: scale(1);
+}
+
+.portfolio-item .zooming {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: var(--MainTransition);
+}
+
+.portfolio-item .zooming .icon {
+    width: 100%;
+    text-align: center;
+    color: var(--WhiteColor);
+    font-size: 1.6rem;
+}
+
+/* END PORTFOLIO STYELS */
+
+/* START PRICING STYLES */
+.pricing .pricing-table {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    flex: 0 0 calc(100% / 3 - 2rem);
+    margin-bottom: 3rem;
+    transition: var(--MainTransition);
+    text-align: center;
+}
+
+.table-head {
+    padding: 2rem 0;
+}
+
+.table-head p {
+    font-size: 2.5rem;
+}
+
+/* END PRICING STYLES */
