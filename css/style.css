@@ -77,7 +77,6 @@ p {
     font-size: 1.6rem;
     color: inherit;
     line-height: 1.8;
-    letter-spacing: 1.1px;
 }
 
 ul {
@@ -270,7 +269,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.icon {
+.soical-icon {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -284,47 +283,49 @@ input[type="submit"] {
     text-align: center;
 }
 
-.icon:last-child {
+.soical-icon:last-child {
     margin-right: 0;
 }
 
-.icon:hover {
+.soical-icon:hover {
     transform: translateY(2px);
 }
 
-.icon:hover:first-of-type {
+.soical-icon:hover:first-of-type {
     background-color: #3b5999;
     color: var(--WhiteColor);
 }
 
-.icon:hover:nth-child(2) {
+.soical-icon:hover:nth-child(2) {
     background-color: #55acee;
     color: var(--WhiteColor);
 }
 
-.icon:hover:nth-child(3) {
+.soical-icon:hover:nth-child(3) {
     background-color: #e4405f;
     color: var(--WhiteColor);
 }
 
-.icon:hover:nth-child(4) {
+.soical-icon:hover:nth-child(4) {
     background-color: #0077B5;
     color: var(--WhiteColor);
 }
 
-.icon:hover:first-of-type {
+.soical-icon:hover:first-of-type {
     background-color: #3b5999;
     color: var(--WhiteColor);
 }
 
-.icon:hover:first-of-type {
+.soical-icon:hover:first-of-type {
     background-color: #3b5999;
     color: var(--WhiteColor);
 }
 
-.icon i {
+.soical-icon i {
     vertical-align: middle;
 }
+
+
 
 /* END HELPER CLASSES */
 
@@ -336,7 +337,6 @@ input[type="submit"] {
 .header {
     background: url(../img/hero/hero-area.jpg) no-repeat top left;
     background-size: cover;
-    height: 100vh;
     position: relative;
     z-index: 0;
 }
@@ -367,6 +367,35 @@ input[type="submit"] {
     color: var(--PrimaryColor);
 }
 
+.navbar-toggler {
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-toggler .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--WhiteColor);
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.navbar-toggler .bar:last-child {
+    margin-bottom: 0;
+}
+
+.navbar-toggler .bar-top,
+.navbar-toggler .bar-bottom {
+    width: 20px;
+}
+
+.navbar-toggler .bar-bottom {
+    margin-left: auto;
+}
+
+
 .nav-link {
     font-size: 1.4rem;
     font-family: var(--PrimaryFontFamily);
@@ -388,6 +417,7 @@ input[type="submit"] {
     display: none;
 }
 
+
 .list-item .active::before {
     display: block;
 }
@@ -397,6 +427,7 @@ input[type="submit"] {
     height: 60%;
     margin: 0 auto;
     text-align: center;
+    padding: 120px 0;
 }
 
 .header-title {
@@ -419,6 +450,7 @@ input[type="submit"] {
     position: absolute;
     bottom: 50px;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 .header-cta a {
@@ -466,7 +498,6 @@ input[type="submit"] {
     margin-bottom: 3rem;
     transition: var(--MainTransition);
     cursor: pointer;
-    margin-bottom: 3rem;
 }
 
 .service-item:hover {
@@ -497,7 +528,6 @@ input[type="submit"] {
     margin-bottom: 3rem;
     transition: var(--MainTransition);
     cursor: pointer;
-    margin-bottom: 3rem;
 }
 
 .about .item .icon {
@@ -570,7 +600,7 @@ input[type="submit"] {
 
 .portfolio .portfolio-item {
     flex: 0 0 calc(100% / 3 - 2rem);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     position: relative;
 }
 
@@ -666,6 +696,7 @@ input[type="submit"] {
     text-align: center;
     color: var(--WhiteColor);
     border-radius: 10px;
+    margin-bottom: 3rem;
 }
 
 .counter-item .icon {
@@ -701,7 +732,7 @@ input[type="submit"] {
 }
 
 .testi .testi-info {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .testi .testi-info.flex {
@@ -772,7 +803,7 @@ input[type="submit"] {
     padding: 2rem 0;
     box-shadow: var(--MainShadow);
     flex: 0 0 calc(100% / 4 - 2rem);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
     background-color: var(--GrayColor);
     transition: var(--MainTransition);
@@ -847,6 +878,7 @@ input[type="submit"] {
     box-shadow: var(--MainShadow);
     flex: 0 0 calc(100% / 3 - 2rem);
     align-self: stretch;
+    margin-bottom: 3rem;
 }
 
 .blog-item .blog-body {
@@ -865,6 +897,10 @@ input[type="submit"] {
 /* END BLOG STYLES */
 
 /* START CLIENTS STYLES */
+.clients-items {
+    overflow: hidden;
+}
+
 .client-item {
     opacity: 0.4;
     cursor: pointer;
@@ -888,7 +924,7 @@ input[type="submit"] {
 }
 
 .contact .input-group {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .contact .textarea {
@@ -913,14 +949,31 @@ input[type="submit"] {
 /* END CONTACT STYLES */
 
 /* START FOOTER STYLES */
+.footer {
+    position: relative;
+}
+
+.footer-content.flex {
+    align-items: flex-start;
+}
+
 .footer .footer-item {
     flex: 0 0 calc(100% / 4 - 2rem);
+    padding: 2rem 0;
+}
+
+.footer .footer-item h4 {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: var(--FontMedium);
+    text-transform: uppercase;
 }
 
 .footer .logo-large {
     font-size: 4rem;
     font-weight: var(--FontBold);
     margin-bottom: 1.5rem;
+    margin-top: -1.5rem;
 }
 
 .footer .footer-item p {
@@ -928,4 +981,206 @@ input[type="submit"] {
     margin-bottom: 2rem;
 }
 
+.footer-list .list-item {
+    margin-right: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: var(--TextColor);
+}
+
+.footer-contact.flex {
+    flex-wrap: wrap;
+}
+
+.footer-item .insta-img {
+    flex: 0 0 calc(100% / 3 - .5rem);
+    margin-bottom: .5rem;
+}
+
+.copyright {
+    padding: 3rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.copyright .nav-link:hover {
+    color: var(--PrimaryColor);
+}
+
+.back-top {
+    position: absolute;
+    bottom: 6rem;
+    right: 5rem;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    color: var(--PrimaryColor);
+    text-align: center;
+    line-height: 5rem;
+    box-shadow: var(--SecondaryShadow);
+    transition: var(--MainTransition);
+    transform: translateY(-3px);
+    z-index: 100;
+}
+
+.back-top:hover {
+    box-shadow: var(--MainShadow);
+
+}
+
+.back-top i {
+    font-size: 3rem;
+    vertical-align: middle;
+}
+
 /* END FOOTER STYLES */
+
+/* START MEDIA QUERIES */
+/*
+Extra small devices (portrait phones, less than 576px) No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .btn {
+        padding: 0.8rem 3rem;
+        font-size: 1.2rem;
+        border-radius: 10px;
+    }
+
+    .section-heading {
+        font-size: 2.25rem;
+    }
+
+    .title-mirror {
+        top: -15px;
+    }
+
+    /* HEADER */
+    .header {
+        padding-bottom: 120px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .header-text {
+        width: 100%;
+    }
+
+    .header-title {
+        font-size: 3.6rem;
+    }
+
+    .header-desc {
+        font-size: 1.4rem;
+    }
+
+    /* SERVICES */
+    .service-item {
+        flex: 0 0 100%;
+    }
+
+    /* ABOUT */
+    .about-content.flex {
+        flex-wrap: wrap;
+    }
+
+    .about .about-items,
+    .about .about-graph {
+        flex: 0 0 100%;
+    }
+
+    /* WORKS */
+    .portfolio .portfolio-item {
+        flex: 0 0 100%;
+    }
+
+    /* PRICING */
+
+    .pricing-tables.flex {
+        flex-wrap: wrap;
+    }
+
+    .pricing .pricing-table {
+        flex: 0 0 100%;
+    }
+
+    /* COUNTER */
+
+    .counter-content.flex {
+        flex-wrap: wrap;
+    }
+
+    .counter-item {
+        flex: 0 0 calc(100% / 2 - 2rem);
+    }
+
+    .testi .testi-single {
+        flex: 0 0 100%;
+    }
+
+    /* CTA */
+    .container.flex {
+        flex-direction: column;
+    }
+
+    .cta .cta-info {
+        margin-bottom: 3rem;
+    }
+
+    .cta .cta-info h4 {
+        font-size: 3rem;
+    }
+
+    /* TEAM */
+    .team-cards.flex {
+        flex-direction: column;
+    }
+
+    .team .card {
+        width: 80%;
+    }
+
+    /* SUBSCRIBE */
+    .subscribe-content.flex {
+        flex-direction: column;
+    }
+
+    /* BLOG */
+    .blog-content.flex {
+        flex-direction: column;
+    }
+
+    /* CLIENTS */
+    .client-item {
+        flex: 0 0 calc(100% / 2);
+    }
+
+    /* CONTACT */
+    .contact-content.flex {
+        flex-direction: column;
+    }
+
+
+    /* FOOTER */
+
+    .footer .footer-item {
+        flex: 0 0 calc(100% / 2 - 2rem);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
