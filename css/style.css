@@ -40,6 +40,7 @@ body {
     font-family: var(--PrimaryFontFamily);
     color: var(--TextColor);
     font-weight: normal;
+    overflow-x: hidden;
 }
 
 h1,
@@ -722,13 +723,15 @@ input[type="submit"] {
     overflow: hidden;
 }
 
+.testi-items.flex {
+    align-items: normal;
+}
+
 .testi .testi-single {
-    flex: 0 0 calc(100% / 2);
-    margin-right: 3rem;
+    flex: 0 0 calc(100% / 2 - 2rem);
     background-color: var(--WhiteColor);
     box-shadow: var(--MainShadow);
     padding: 3rem;
-
 }
 
 .testi .testi-info {
@@ -829,6 +832,7 @@ input[type="submit"] {
     padding: 3rem 2rem;
     flex: 0 0 40%;
     align-self: stretch;
+    margin-bottom: 3rem;
 }
 
 .subscribe .input-group {
@@ -916,7 +920,7 @@ input[type="submit"] {
 /* START CONTACT STYLES */
 .contact .contact-form {
     flex: 0 0 70%;
-    margin-right: 2rem;
+    margin-right: 0;
 }
 
 .contact .input[id="name"] {
@@ -1041,8 +1045,195 @@ input[type="submit"] {
 Extra small devices (portrait phones, less than 576px) No media query since this is the default in Bootstrap because it is "mobile first"
 */
 
+@media (max-width: 335px) {
+
+    .soical-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .list-item {
+        margin-right: 0.8rem;
+    }
+
+    /* HEADER */
+    .header-btn {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header-btn .btn {
+        width: 180px;
+    }
+
+    .header-btn .btn:first-child {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    /* FOOTER */
+    .back-top {
+        right: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .btn {
+        padding: 0.8rem 3rem;
+        font-size: 1.2rem;
+        border-radius: 10px;
+    }
+
+    .section-heading {
+        font-size: 2.25rem;
+    }
+
+    .title-mirror {
+        top: -15px;
+    }
+
+    /* HEADER */
+    .header {
+        padding-bottom: 120px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .header-text {
+        width: 100%;
+    }
+
+    .header-title {
+        font-size: 3.6rem;
+    }
+
+    .header-desc {
+        font-size: 1.4rem;
+    }
+
+    /* SERVICES */
+    .service-item {
+        flex: 0 0 100%;
+    }
+
+    /* ABOUT */
+    .about-content.flex {
+        flex-wrap: wrap;
+    }
+
+    .about .about-items,
+    .about .about-graph {
+        flex: 0 0 100%;
+    }
+
+    /* WORKS */
+    .portfolio .control-list.flex {
+        flex-wrap: wrap;
+    }
+
+    .portfolio .portfolio-item {
+        flex: 0 0 100%;
+    }
+
+
+    /* PRICING */
+
+    .pricing-tables.flex {
+        flex-wrap: wrap;
+    }
+
+    .pricing .pricing-table {
+        flex: 0 0 100%;
+    }
+
+    /* COUNTER */
+
+    .counter-content.flex {
+        flex-wrap: wrap;
+    }
+
+    .counter-item {
+        flex: 0 0 100%;
+    }
+
+    .testi .testi-single {
+        flex: 0 0 100%;
+    }
+
+    /* CTA */
+    .container.flex {
+        flex-direction: column;
+    }
+
+    .cta .cta-info {
+        margin-bottom: 3rem;
+    }
+
+    .cta .cta-info h4 {
+        font-size: 3rem;
+    }
+
+    /* TEAM */
+    .team-cards.flex {
+        flex-direction: column;
+    }
+
+    .team .card {
+        width: 80%;
+    }
+
+    /* SUBSCRIBE */
+    .subscribe-content.flex {
+        flex-direction: column;
+    }
+
+    /* BLOG */
+    .blog-content.flex {
+        flex-direction: column;
+    }
+
+    /* CLIENTS */
+    .client-item {
+        flex: 0 0 calc(100% / 2);
+    }
+
+    /* CONTACT */
+    .contact-content.flex {
+        flex-direction: column;
+    }
+
+
+    /* FOOTER */
+    .footer-content.flex {
+        flex-wrap: wrap;
+    }
+
+    .footer .footer-item {
+        flex: 0 0 100%;
+
+    }
+
+    .copyright.flex {
+        flex-direction: column;
+    }
+
+    .copyright .copy {
+        margin-bottom: 2rem;
+    }
+
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+
     .btn {
         padding: 0.8rem 3rem;
         font-size: 1.2rem;
@@ -1170,17 +1361,222 @@ Extra small devices (portrait phones, less than 576px) No media query since this
 
 
     /* FOOTER */
+    .footer-content.flex {
+        flex-wrap: wrap;
+    }
 
     .footer .footer-item {
-        flex: 0 0 calc(100% / 2 - 2rem);
+        flex: 0 0 calc(100% / 2 - 1rem);
+
+    }
+
+    .copyright.flex {
+        flex-direction: column;
+    }
+
+    .copyright .copy {
+        margin-bottom: 2rem;
     }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .btn {
+        padding: 1.2rem 4rem;
+        font-size: 1.4rem;
+        border-radius: 10px;
+    }
+
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    /* HEADER */
+    .header-title {
+        font-size: 4.2rem;
+    }
+
+    /* SERVICES */
+    .service-item {
+        flex: 0 0 calc(100% / 2 - 1.5rem)
+    }
+
+    /* WORKS */
+    .portfolio .portfolio-item {
+        flex: 0 0 calc(100% / 2 - 1.5rem);
+    }
+
+    /* PRICING */
+    .pricing .pricing-table {
+        flex: 0 0 calc(100% / 2 - 1.5rem);
+    }
+
+    .pricing .pricing-popular {
+        padding: 0;
+    }
+
+    /* TESTI */
+    .testi .testi-single {
+        flex: 0 0 calc(100% / 2 - 2rem);
+        margin-right: 3rem;
+        padding: 1.5rem;
+    }
+
+    .testi .testi-name {
+        font-size: 1.8rem;
+        font-weight: var(--FontBold);
+    }
+
+    /* CTA */
+    .container.flex {
+        flex-direction: row;
+    }
+
+    /* TEAM */
+    .team-cards.flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .team .card {
+        flex: 0 0 calc(100% / 2 - 1.5rem);
+    }
+
+    /* BLOGS */
+    .blog-content.flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .blog .blog-item {
+        flex: 0 0 calc(100% / 2 - 1.5rem);
+    }
+
+    /* CLIENTS */
+    .client-item {
+        flex: 0 0 calc(100% / 3);
+    }
+
+    /* CONTACT */
+    .contact-content.flex {
+        flex-direction: row;
+    }
+
+    .contact .contact-form {
+        flex: 0 0 60%;
+    }
+
+    .contact .contact-info {
+        padding: 1.2rem;
+    }
+
+    /* FOOTER */
+    .copyright.flex {
+        flex-direction: row;
+    }
+
+    .copyright .copy {
+        margin-bottom: 0;
+    }
+}
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+    .soical-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    /* HEADER */
+    .main-nav {
+        display: block;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .header-text {
+        width: 80%;
+    }
+
+    /* SERVICES */
+    .service-item {
+        flex: 0 0 calc(100% / 3 - 1.5rem)
+    }
+
+    /* ABOUT */
+    .about .about-items {
+        flex: 0 0 40%;
+        margin-right: 0;
+    }
+
+    .about .about-graph {
+        flex: 0 0 58%;
+    }
+
+    /* WORKS */
+    .portfolio .portfolio-item {
+        flex: 0 0 calc(100% / 3 - 1.5rem);
+    }
+
+    /* COUNTER */
+    .counter-item {
+        flex: 0 0 calc(100% / 4 - 1.5rem);
+        padding: 2.5rem;
+    }
+
+    /* PRICING */
+    .pricing .pricing-table {
+        flex: 0 0 calc(100% / 3 - 1.5rem);
+    }
+
+    .pricing .pricing-popular {
+        padding: 2rem 0;
+    }
+
+    /* TEAM */
+    .team .card {
+        flex: 0 0 calc(100% / 4 - 1.5rem);
+    }
+
+    /* SUBSCRIBE */
+    .subscribe-content.flex {
+        flex-direction: row;
+    }
+
+    .subscribe .subscribe-form {
+        flex: 0 0 40%;
+    }
+
+    .subscribe .subscribe-items {
+        flex: 0 0 55%;
+    }
+
+    /* BLOGS */
+    .blog .blog-item {
+        flex: 0 0 calc(100% / 3 - 1.5rem);
+    }
+
+    /* CLIENTS */
+    .client-item {
+        flex: 0 0 calc(100% / 4);
+    }
+
+    /* FOOTER */
+    .footer .footer-item {
+        flex: 0 0 calc(100% / 4 - 1rem);
+    }
+
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+    /* CLIENTS */
+    .client-item {
+        flex: 0 0 calc(100% / 5);
+    }
+}
