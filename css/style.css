@@ -340,6 +340,7 @@ input[type="submit"] {
     background-size: cover;
     position: relative;
     z-index: 0;
+    padding-bottom: 120px;
 }
 
 .header.overlay::before {
@@ -1096,7 +1097,7 @@ Extra small devices (portrait phones, less than 576px) No media query since this
 
     /* HEADER */
     .header {
-        padding-bottom: 120px;
+        height: auto;
     }
 
     .main-nav {
@@ -1250,7 +1251,7 @@ Extra small devices (portrait phones, less than 576px) No media query since this
 
     /* HEADER */
     .header {
-        padding-bottom: 120px;
+        height: auto;
     }
 
     .main-nav {
