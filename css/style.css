@@ -343,10 +343,6 @@ input[type="submit"] {
     padding-bottom: 120px;
 }
 
-.header>.container {
-    padding-top: 160px;
-}
-
 .header.overlay::before {
     background-color: var(--MianOverlay);
 }
@@ -358,7 +354,7 @@ input[type="submit"] {
     left: 0;
     width: 100%;
     transition: var(--MainTransition);
-    box-shadow: var(--MainShadow);
+    z-index: 999;
 }
 
 .header-logo .logo {
@@ -445,14 +441,13 @@ input[type="submit"] {
 
 .header-text {
     width: 70%;
-    height: 60%;
     margin: 0 auto;
     text-align: center;
-    padding: 120px 0;
+    padding-top: 120px;
 }
 
 .header .text-inner {
-    padding-top: 160px;
+    padding-top: 80px;
 }
 
 .header-title {
@@ -472,7 +467,7 @@ input[type="submit"] {
 .header-cta {
     text-align: center;
     color: var(--WhiteColor);
-    margin: 60px auto;
+    margin: 100px auto 50px;
 }
 
 .header-cta a {
@@ -509,6 +504,7 @@ input[type="submit"] {
 .is-scrolled .header-nav {
     background: var(--WhiteColor);
     height: 80px;
+    box-shadow: var(--MainShadow);
 }
 
 .is-scrolled .header-nav .nav-link {
@@ -1203,7 +1199,7 @@ Extra small devices (portrait phones, less than 576px) No media query since this
     }
 
     /* CTA */
-    .container.flex {
+    .cta .container.flex {
         flex-direction: column;
     }
 
@@ -1287,6 +1283,8 @@ Extra small devices (portrait phones, less than 576px) No media query since this
         height: auto;
     }
 
+
+
     .main-nav {
         display: none;
     }
@@ -1352,7 +1350,7 @@ Extra small devices (portrait phones, less than 576px) No media query since this
     }
 
     /* CTA */
-    .container.flex {
+    .cta .container.flex {
         flex-direction: column;
     }
 
@@ -1612,6 +1610,11 @@ Extra small devices (portrait phones, less than 576px) No media query since this
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+    /* HEADER */
+    .header-text {
+        width: 55%;
+    }
 
     /* CLIENTS */
     .client-item {
