@@ -74,8 +74,8 @@
                         <a href="#" class="btn btn-transparent">Get Started!</a>
                     </div>
                     <div class="header-cta">
-                        <a href="#">
-                            <i class="lni lni-chevron-down h-cta"></i>
+                        <a href="#services" class="h-cta">
+                            <i class="lni lni-chevron-down"></i>
                         </a>
                     </div>
                 </div>
@@ -261,21 +261,21 @@
             <div class="portfolio-control">
                 <ul class="control-list flex">
                     <li class="list-item">
-                        <a href="#" class="btn btn-white">All</a>
+                        <a href="#" class="btn btn-white filter-btn active" data-target="all">All</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="btn btn-colored">Design</a>
+                        <a href="#" class="btn btn-colored filter-btn" data-target="design">Design</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="btn btn-colored">Development</a>
+                        <a href="#" class="btn btn-colored filter-btn" data-target="development">Development</a>
                     </li>
                     <li class="list-item">
-                        <a href="#" class="btn btn-colored">Print</a>
+                        <a href="#" class="btn btn-colored filter-btn" data-target="print">Print</a>
                     </li>
                 </ul>
             </div>
-            <div class="portfolio-content flex">
-                <div class="portfolio-item">
+            <div class="portfolio-content">
+                <div class="portfolio-item" data-item="design">
                     <img src="./img/work/work-1.jpg" alt="portfolio">
                     <div class="zooming flex">
                         <a href="./img/work/work-1.jpg" class="icon">
@@ -284,7 +284,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-item="print">
                     <img src="./img/work/work-2.jpg" alt="portfolio">
                     <div class="zooming flex">
                         <a href="./img/work/work-2.jpg" class="icon">
@@ -293,7 +293,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-item="development">
                     <img src="./img/work/work-3.jpg" alt="portfolio">
                     <div class="zooming flex">
                         <a href="./img/work/work-3.jpg" class="icon">
@@ -302,7 +302,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-item="development">
                     <img src="./img/work/work-4.jpg" alt="portfolio">
                     <div class="zooming flex">
                         <a href="./img/work/work-4.jpg" class="icon">
@@ -311,7 +311,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-item="design">
                     <img src="./img/work/work-5.jpg" alt="portfolio">
                     <div class="zooming flex">
                         <a href="./img/work/work-5.jpg" class="icon">
@@ -320,7 +320,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-item="development">
                     <img src="./img/work/work-6.jpg" alt="portfolio">
                     <div class="zooming flex">
                         <a href="./img/work/work-6.jpg" class="icon">
@@ -1000,7 +1000,7 @@
                 </ul>
             </div>
         </div>
-        <a href="#" class="back-top">
+        <a href="#home" class="back-top">
             <i class="lni lni-chevron-up-circle lni-16"></i>
         </a>
     </footer>

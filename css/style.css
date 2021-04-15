@@ -340,7 +340,10 @@ input[type="submit"] {
     background-size: cover;
     position: relative;
     z-index: 9999;
-    padding-bottom: 120px;
+}
+
+.header>.container {
+    padding: 200px 0 120px;
 }
 
 .header.overlay::before {
@@ -443,7 +446,6 @@ input[type="submit"] {
     width: 70%;
     margin: 0 auto;
     text-align: center;
-    padding-top: 120px;
 }
 
 .header .text-inner {
@@ -626,13 +628,14 @@ input[type="submit"] {
 }
 
 .portfolio .portfolio-content {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
 }
 
 .portfolio .portfolio-item {
-    flex: 0 0 calc(100% / 3 - 2rem);
-    margin-bottom: 3rem;
     position: relative;
+    transition: var(--MainTransition);
 }
 
 .portfolio .portfolio-item:hover .zooming {

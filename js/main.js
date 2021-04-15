@@ -1,7 +1,12 @@
 const navLink = document.querySelectorAll('.header .nav-link');
 const header = document.querySelector('.header');
+const headerCta = document.querySelector('.h-cta');
 const navList = document.querySelector('.nav-list')
-const counter = document.querySelectorAll('.counter-value');
+const counter = document.querySelector('.counter');
+const counterVal = document.querySelectorAll('.counter-value');
+const backTop = document.querySelector('.back-top');
+const filterBtn = document.querySelectorAll('.filter-btn');
+const portfolioItem = document.querySelectorAll('.portfolio-item');
 
 
 
@@ -30,6 +35,18 @@ navLink.forEach((nav) => {
     })
 })
 
+// ADD EVENT LISENTER TO HEADER CTA BUTTON 
+headerCta.addEventListener('click', (cta) => {
+    cta.preventDefault();
+    const ctaTarget = headerCta.getAttribute('href');
+    const sectionTop = document.querySelector(ctaTarget).offsetTop - 80;
+    window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth"
+    });
+
+})
+
 // ADD CLASS "IS SCROLLED" TO HEADER WHEN SCROLLING
 window.addEventListener('scroll', () => {
     if (window.scrollY > 10) {
@@ -56,22 +73,63 @@ window.addEventListener('scroll', () => {
 });
 
 
-// COUNTER SECTION
-counter.forEach((counter) => {
-    counter.innerText = '0';
 
-    const counterUpdate = () => {
-        const target = +counter.getAttribute('data-target');
-        const c = +counter.innerText;
-        const increment = target / 200;
+// window.addEventListener('scroll', () => {
+//     const windowPosition = window.scrollY;
+//     const counterPosition = counter.offsetTop;
 
-        if (c < target) {
-            counter.innerText = `${Math.ceil(c + increment)}`
-            setTimeout(counterUpdate, 1);
-        }
+//     if (windowPosition > counterPosition) {
+//         // COUNTER SECTION
+//         counterVal.forEach((counter) => {
+//             counter.innerText = '0';
 
-    }
+//             const counterUpdate = () => {
+//                 const target = +counter.getAttribute('data-target');
+//                 const c = +counter.innerText;
+//                 const increment = target / 500;
 
-    counterUpdate();
+//                 if (c < target) {
+//                     counter.innerText = `${Math.ceil(c + increment)}`
+//                     setTimeout(counterUpdate, 1);
+//                 }
 
+//             }
+//             counterUpdate();
+//         })
+//     }
+// })
+
+// ADD EVENT LISENTER TO BACK TO TOP BUTTON
+backTop.addEventListener('click', (back) => {
+    back.preventDefault();
+    const backTarget = backTop.getAttribute('href');
+    const sectionTop = document.querySelector(backTarget).offsetTop;
+    window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth"
+    });
 })
+
+// PORTFOLIO FILTER
+filterBtn.forEach((filter) => {
+    filter.addEventListener('click', (filElement) => {
+        filElement.preventDefault();
+        for (let btn of filterBtn) {
+            btn.classList.remove('active');
+        }
+        filter.classList.add('active');
+
+        // SHOW PORTFOLIO ITEM 
+        portfolioItem.forEach((item) => {
+            item.style.display = "none";
+            let folio = filter.getAttribute('data-target');
+
+            if (item.getAttribute('data-item') === folio || folio === 'all') {
+                item.style.display = "block";
+            }
+        })
+    })
+
+
+
+});
