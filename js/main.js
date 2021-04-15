@@ -7,6 +7,11 @@ const counterVal = document.querySelectorAll('.counter-value');
 const backTop = document.querySelector('.back-top');
 const filterBtn = document.querySelectorAll('.filter-btn');
 const portfolioItem = document.querySelectorAll('.portfolio-item');
+const previewBox = document.querySelector('.portfolio-preview');
+const imgBox = document.querySelector('.img-box');
+const previewShadow = document.querySelector('.portfolio-shadow');
+const closeBtn = document.querySelector('.close');
+const zoomIconBtn = document.querySelectorAll('.zoom-icon');
 
 
 
@@ -121,11 +126,15 @@ filterBtn.forEach((filter) => {
 
         // SHOW PORTFOLIO ITEM 
         portfolioItem.forEach((item) => {
-            item.style.display = "none";
+            // item.style.display = "none";
             let folio = filter.getAttribute('data-target');
 
             if (item.getAttribute('data-item') === folio || folio === 'all') {
                 item.style.display = "block";
+                item.classList.add('show');
+            } else {
+                item.style.display = "none";
+                item.classList.remove('show');
             }
         })
     })
@@ -133,3 +142,16 @@ filterBtn.forEach((filter) => {
 
 
 });
+
+// PORTFOLIO PREVIEW
+zoomIconBtn.forEach((z) => {
+    z.addEventListener('click', (btn) => {
+        btn.preventDefault();
+        const imgSrc = z.parentElement.parentElement.firstElementChild.getAttribute('src');
+
+        previewBox.classList.add('box-open');
+        imgBox.lastElementChild.setAttribute('src', imgSrc);
+
+
+    })
+})

@@ -327,6 +327,24 @@ input[type="submit"] {
 }
 
 
+.show {
+    animation: scale cubic-bezier(0.23, 1, 0.320, 1) 0.3s;
+    transition: var(--MainTransition);
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.portfolio-preview.box-open {
+    display: block;
+}
 
 /* END HELPER CLASSES */
 
@@ -618,6 +636,9 @@ input[type="submit"] {
 /* END PROMO STYLES */
 
 /* STRAT PORTFOLIO STYELS */
+.portfolio {
+    position: relative;
+}
 
 .portfolio .portfolio-control {
     margin-bottom: 3rem;
@@ -653,12 +674,49 @@ input[type="submit"] {
     transition: var(--MainTransition);
 }
 
-.portfolio-item .zooming .icon {
+.portfolio-item .zooming .zoom-icon {
     width: 100%;
     text-align: center;
     color: var(--WhiteColor);
     font-size: 1.6rem;
+    box-shadow: var(--SecondaryShadow);
 }
+
+.portfolio-preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 700px;
+    transform: translate(-50%, -50%);
+    padding: 0 2rem 2rem 2rem;
+    z-index: 8888;
+    background: var(--WhiteColor);
+    display: none;
+}
+
+.portfolio .close {
+    text-align: right;
+    padding: 2rem 0;
+    cursor: pointer;
+}
+
+.portfolio .close i {
+    font-size: 3rem;
+}
+
+.portfolio .portfolio-shadow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: none;
+}
+
 
 /* END PORTFOLIO STYELS */
 
